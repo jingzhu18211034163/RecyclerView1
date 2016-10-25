@@ -1,6 +1,7 @@
 package com.bw.recyclerview.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.util.Pair;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bw.recyclerview.DepartmentsActivity;
 import com.bw.recyclerview.R;
 import com.bw.recyclerview.bean.Data;
 
@@ -103,7 +105,8 @@ public class ViewHolder2 extends BaseViewHolder{
             @Override
             public void onClick(View v) {
                 if(second!=null){
-
+                    Intent intent=new Intent(context, DepartmentsActivity.class);
+                    context.startActivity(intent);
                     Toast.makeText(context,second.name, Toast.LENGTH_LONG).show();
                 }
 
@@ -114,6 +117,8 @@ public class ViewHolder2 extends BaseViewHolder{
             rl_item_community_first.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent intent=new Intent(context, DepartmentsActivity.class);
+                    context.startActivity(intent);
                     Toast.makeText(context,first.name, Toast.LENGTH_LONG).show();
                 }
             });
